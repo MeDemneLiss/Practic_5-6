@@ -1,0 +1,34 @@
+﻿<Window x:Class="Practic_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practic_5"
+        mc:Ignorable="d"
+        Title="Практические работы 5-6" Height="271" Width="467" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,1">
+        <Menu VerticalAlignment="Top" Height="26" >
+            <MenuItem Header="Опции" Width="65" >
+                <MenuItem Header="Изменить параметры" Click="ChangeParameters_Click" />
+                <MenuItem Header="Сравнение" Click="Comparison_Click" />
+            </MenuItem>
+            <Separator Width="243" Height="16">
+            </Separator>
+            <MenuItem Header="Выход" Click="Exit_Click"></MenuItem>
+            <MenuItem Header="О программе" Click="Info_Click" ></MenuItem>
+        </Menu>
+        <TextBox x:Name="parameterOutput" HorizontalAlignment="Left" Margin="8,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="149" IsReadOnly="True" Text="Торговая марка - нет данных&#xA;Мощность - 0 л.с. &#xA;Колличество цилиндров - 0&#xA; &#xA;Торговая марка - нет данных&#xA;Мощность - 0 л.с.&#xA;Колличество цилиндров - 0"  />
+        <TextBlock HorizontalAlignment="Left" Margin="220,32,0,0" Text="Параметры:" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox  x:Name="tredemark" HorizontalAlignment="Left" Margin="322,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="21"/>
+        <TextBlock HorizontalAlignment="Left" Margin="220,64,0,0" Text="Торговая марка" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.076,0.378" />
+        <TextBlock HorizontalAlignment="Left" Margin="220,96,0,0" Text="Мощность" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox x:Name="power" HorizontalAlignment="Left" Margin="292,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" />
+        <TextBlock HorizontalAlignment="Left" Margin="220,129,0,0" Text="Колличество цилиндров" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" />
+        <TextBox x:Name="numberCylinders" HorizontalAlignment="Left" Margin="310,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" />
+        <Button x:Name="ChangeParameters" Content="Изменить параметры" HorizontalAlignment="Left" Margin="220,172,0,0" VerticalAlignment="Top"  Width="224" Click="ChangeParameters_Click"/>
+        <Button x:Name="increment" Content="Прибавить л.с." HorizontalAlignment="Left" Margin="358,96,0,0" VerticalAlignment="Top"  Height="22" Click="IncreasePower_Click"/>
+        <Button x:Name="Compare" Content="Сравнить уровень крутости" HorizontalAlignment="Left" Margin="220,199,0,0" VerticalAlignment="Top"  Width="224" Height="25" Click="Comparison_Click"/>
+        <RadioButton x:Name="firstCar" Content="Первый автомобиль" HorizontalAlignment="Left" Margin="12,37,0,0" VerticalAlignment="Top" Checked="FirstCar_Checked" IsChecked="True"/>
+        <RadioButton x:Name="secondCar" Content="Второй автомобиль" HorizontalAlignment="Left" Margin="12,53,0,0" VerticalAlignment="Top" Checked="SecondCar_Checked"/>
+    </Grid>
+</Window>
